@@ -2,8 +2,8 @@
 
 import { Menu, X } from 'lucide-react';
 import { useState, type FC } from 'react';
-import SmartLink from '../ui/SmartLink';
 import { usePathname } from 'next/navigation';
+import SmartLink from './ui/SmartLink';
 
 const Header: FC = () => {
   const [open, setOpen] = useState(false);
@@ -21,7 +21,7 @@ const Header: FC = () => {
   const isActive = (href: string) => pathname === href;
 
   return (
-    <header className='fixed w-full h-10 sm:h-20 2xl:h-30 bg-[var(--bg-header)]/50 flex justify-between items-center px-5 sm:px-10 md:px-20 text-[var(--text-element-small-black)] z-10 top-0 md:h-14 '>
+    <header className='fixed w-full h-10 sm:h-20 2xl:h-30 bg-[var(--bg-header)]/50 flex justify-between items-center px-5 sm:px-10 md:px-20 text-[var(--text-element)] z-10 top-0 md:h-14 '>
       <div className='font-bold text-[var(--text-element)] 2xl:text-5xl text-xl sm:text-3xl'>Rose</div>
 
       {/* Desktop Nav */}
@@ -33,7 +33,7 @@ const Header: FC = () => {
             className={`cursor-pointer ${
               isActive(href)
                 ? 'text-[var(--text-active)] font-semibold border-b-3 border-[var(--text-active)]'
-                : 'text-[var(--text-element-small-black)]'
+                : 'text-[var(--text-element)]'
             }`}
           >
             {label}

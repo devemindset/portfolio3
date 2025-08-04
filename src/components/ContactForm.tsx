@@ -11,10 +11,8 @@ const ContactForm: FC = () => {
             
             <motion.section className='bg-[var(--background-element-3)] flex flex-col items-center mx-1 sm:mx-24 rounded-2xl shadow-2xl space-y-5 p-2 sm:p-10'
             initial= {{ opacity:0, y: 40 }}
-              
-                transition={{ duration:1, delay:0.3}}
-                whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+                    animate = {{opacity : 1, y: 0}}
+                    transition={{ duration:1, delay:0.3}}
             >
                 <div className='grid grid-cols-2 gap-5 w-full border-[var(--text-element-small)]'>
                     <input type="email" className='border p-2 border-[var(--text-element-small)] focus:outline-none focus:ring-2 focus:ring-[var(--btn-bg)] bg-[var(--input-bg)]' placeholder='Email' />
